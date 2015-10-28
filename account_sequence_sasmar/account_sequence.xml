@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <record model="ir.ui.view" id="view_account_account_sequence">
+        <field name="name">account.account.sequence</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="sequence" invisible="1"/>
+            </field>
+    	</field>
+    </record>
+
+
+    <record model="ir.ui.view" id="view_account_account_sequence_tree">
+        <field name="name">account.account.sequence.tree</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_tree"/>
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="sequence" invisible="1"/>
+            </field>
+    	</field>
+    </record>
+
+    </data>
+</openerp>
